@@ -4,48 +4,72 @@
   
   <url>
     <loc>/docs/example/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/example/table-of-contents/with-toc/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/example/table-of-contents/without-toc/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>/docs/cloud/IaaS/</loc>
+    <lastmod>2019-10-17T08:46:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/cloud/PaaS/</loc>
+    <lastmod>2019-10-17T08:46:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/cloud/SaaS/</loc>
+    <lastmod>2019-10-17T08:44:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/cloud/</loc>
+    <lastmod>2019-10-17T08:39:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/hypervisor/</loc>
+    <lastmod>2019-10-17T11:04:58+09:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-17T11:04:58+09:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/example/hidden/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
@@ -60,15 +84,18 @@
   
   <url>
     <loc>/docs/example/table-of-contents/3rd/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/example/table-of-contents/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/docs/shortcodes/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
   <url>
@@ -108,6 +135,11 @@
   
   <url>
     <loc>/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-10-16T18:24:13+09:00</lastmod>
   </url>
   
 </urlset>

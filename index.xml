@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on Hugo Book</title>
+    <title>Introduction on 끄적끄적..</title>
     <link>/</link>
-    <description>Recent content in Introduction on Hugo Book</description>
+    <description>Recent content in Introduction on 끄적끄적..</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -49,6 +48,43 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>IaaS</title>
+      <link>/docs/cloud/IaaS/</link>
+      <pubDate>Thu, 17 Oct 2019 08:46:46 +0900</pubDate>
+      
+      <guid>/docs/cloud/IaaS/</guid>
+      <description> IaaS (Infrastructure as a Service) 정의  서버, 스토리지, 네트워크를 필요에 따라 인프라 자원을 사용할 수 있게 클라우드 서비스를 제공하는 형태 대표적인 기술 : 서버 가상화, 데스크톱 가상화 등  하이퍼 바이저 (Hypervisor)    </description>
+    </item>
+    
+    <item>
+      <title>PaaS</title>
+      <link>/docs/cloud/PaaS/</link>
+      <pubDate>Thu, 17 Oct 2019 08:46:43 +0900</pubDate>
+      
+      <guid>/docs/cloud/PaaS/</guid>
+      <description>Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.</description>
+    </item>
+    
+    <item>
+      <title>SaaS</title>
+      <link>/docs/cloud/SaaS/</link>
+      <pubDate>Thu, 17 Oct 2019 08:44:35 +0900</pubDate>
+      
+      <guid>/docs/cloud/SaaS/</guid>
+      <description> Introduction Ferre hinnitibus erat accipitrem dixi Troiae tollens Lorem markdownum, a quoque nutu est quodcumque mandasset veluti. Passim inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet non, mortali undas. Omnis pharetramque gramen portentificisque membris servatum novabis fallit de nubibus atque silvas mihi. Dixit repetitaque Quid; verrit longa; sententia mandat quascumque nescio solebat litore; noctes. Hostem haerentem circuit plenaque tamen.
+ Pedum ne indigenae finire invergens carpebat Velit posses summoque De fumos illa foret  Est simul fameque tauri qua ad </description>
+    </item>
+    
+    <item>
+      <title>Hypervisor</title>
+      <link>/posts/hypervisor/</link>
+      <pubDate>Thu, 17 Oct 2019 11:04:58 +0900</pubDate>
+      
+      <guid>/posts/hypervisor/</guid>
+      <description> 하이퍼바이저(Hypervisor)란? 의미  호스트 컴퓨터 1대에서 다수의 운영체제를 동시에 실행할 수 있도록 해주는 가상 플랫폼 가상화머신모니터 또는 가상화머신매니저(Virtual Machine Monitor, Virtual Machine Manager, 줄여서 VMM)라고도 불림  Type-1 and type-2 hypervisors (출처. Wikipedia)  분류  Type-1 (native, bare-metal)  하이퍼바이저가 하드웨어에서 직접 실행 게스트 운영체제는 하드웨어에서 2번째 수준으로 실행 종류  Xen XenServer (Citrix) ESX Server (VMware) L4 microkernel (ex. L4 projects) TRANGO (Wikipedia) POWER 하이퍼바이저 (IBM) 하이퍼-V (Microsoft)   Type-2 (hosted)  호스트 운영체제에서 실행 VM 내부에서 동작되는 게스트 운영체제는 하드웨어에서 3번째 수준으로 실행 종류  VMware Server VMware Workstation VMware Fusion QEMU Virtual PC, Virtual Server (Microsoft) Virtual Box (Sun) Parallels Workstation, Parallels Descktop    </description>
     </item>
     
     <item>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Hypervisor" />
+<meta property="og:description" content=" 하이퍼바이저(Hypervisor)란? 의미  호스트 컴퓨터 1대에서 다수의 운영체제를 동시에 실행할 수 있도록 해주는 가상 플랫폼 가상화머신모니터 또는 가상화머신매니저(Virtual Machine Monitor, Virtual Machine Manager, 줄여서 VMM)라고도 불림  Type-1 and type-2 hypervisors (출처. Wikipedia)  분류  Type-1 (native, bare-metal)  하이퍼바이저가 하드웨어에서 직접 실행 게스트 운영체제는 하드웨어에서 2번째 수준으로 실행 종류  Xen XenServer (Citrix) ESX Server (VMware) L4 microkernel (ex. L4 projects) TRANGO (Wikipedia) POWER 하이퍼바이저 (IBM) 하이퍼-V (Microsoft)   Type-2 (hosted)  호스트 운영체제에서 실행 VM 내부에서 동작되는 게스트 운영체제는 하드웨어에서 3번째 수준으로 실행 종류  VMware Server VMware Workstation VMware Fusion QEMU Virtual PC, Virtual Server (Microsoft) Virtual Box (Sun) Parallels Workstation, Parallels Descktop    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/hypervisor/" />
+<meta property="article:published_time" content="2019-10-17T11:04:58+09:00" />
+<meta property="article:modified_time" content="2019-10-17T11:04:58+09:00" />
+<title>Hypervisor | 끄적끄적..</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
+
+
+<script defer src="/search.min.143e2e267cd50523f54392ef6e9ef33711d8a09fb60f6b12fb6777de53ce55da.js" integrity="sha256-FD4uJnzVBSP1Q5Lvbp7zNxHYoJ&#43;2D2sS&#43;2d33lPOVdo="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="/"><span>끄적끄적..</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/docs/cloud/"><strong>Cloud Service</strong></a>
+
+<ul>
+<li><a href="/docs/cloud/SaaS/">SaaS</a></li>
+<li><a href="/docs/cloud/PaaS/">PaaS</a></li>
+<li><a href="/docs/cloud/IaaS/">IaaS</a></li>
+</ul></li>
+<li><a href="/docs/example/"><strong>Example Site</strong></a></li>
+<li><a href="/docs/example/table-of-contents/">Table of Contents</a>
+
+<ul>
+<li><a href="/docs/example/table-of-contents/with-toc/">With ToC</a></li>
+<li><a href="/docs/example/table-of-contents/without-toc/">Without ToC</a><br /></li>
+</ul></li>
+<li><strong>Shortcodes</strong></li>
+<li><a href="/docs/shortcodes/buttons/">Buttons</a></li>
+<li><a href="/docs/shortcodes/expand/">Expand</a></li>
+<li><a href="/docs/shortcodes/hints/">Hints</a></li>
+<li><a href="/docs/shortcodes/katex/">Katex</a></li>
+<li><a href="/docs/shortcodes/mermaid/">Mermaid</a></li>
+<li><a href="/docs/shortcodes/tabs/">Tabs</a><br /></li>
+<li><a href="/posts/"><strong>Blog</strong></a></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Hypervisor</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>Hypervisor</h1>
+  <h5>
+    <strong>Oct 17, 2019</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<h2 id="하이퍼바이저-hypervisor-란">하이퍼바이저(Hypervisor)란?</h2>
+
+<h3 id="의미">의미</h3>
+
+<ul>
+<li>호스트 컴퓨터 1대에서 다수의 운영체제를 동시에 실행할 수 있도록 해주는 가상 플랫폼</li>
+<li>가상화머신모니터 또는 가상화머신매니저(Virtual Machine Monitor, Virtual Machine Manager, 줄여서 VMM)라고도 불림</li>
+</ul>
+
+<div style="text-align:center" >
+    <img src="/static/images/hypervisor.png" />
+    <div><b>Type-1 and type-2 hypervisors</b> (출처. <a href="https://en.wikipedia.org/wiki/Hypervisor">Wikipedia</a>)</div>
+</div>
+
+<h3 id="분류">분류</h3>
+
+<ul>
+<li>Type-1 (native, bare-metal)
+
+<ul>
+<li>하이퍼바이저가 하드웨어에서 직접 실행</li>
+<li>게스트 운영체제는 하드웨어에서 2번째 수준으로 실행</li>
+<li>종류
+
+<ul>
+<li><a href="https://xenproject.org">Xen</a></li>
+<li><a href="https://xenserver.org">XenServer (Citrix)</a></li>
+<li><a href="https://www.vmware.com/kr/products/vsphere.html">ESX Server (VMware)</a></li>
+<li>L4 microkernel (ex. <a href="http://www.l4hq.org">L4 projects</a>)</li>
+<li>TRANGO (<a href="https://en.wikipedia.org/wiki/Trango_Virtual_Processors">Wikipedia</a>)</li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/POWER6/iphb2/iphb2hypervisor.htm">POWER 하이퍼바이저 (IBM)</a></li>
+<li><a href="https://docs.microsoft.com/ko-kr/virtualization/hyper-v-on-windows">하이퍼-V (Microsoft)</a></li>
+</ul></li>
+</ul></li>
+<li>Type-2 (hosted)
+
+<ul>
+<li>호스트 운영체제에서 실행</li>
+<li>VM 내부에서 동작되는 게스트 운영체제는 하드웨어에서 3번째 수준으로 실행</li>
+<li>종류
+
+<ul>
+<li><a href="https://www.vmware.com/kr/products/vcenter-server.html">VMware Server</a></li>
+<li><a href="https://www.vmware.com/kr/products/workstation-pro.html">VMware Workstation</a></li>
+<li><a href="https://www.vmware.com/kr/products/fusion.html">VMware Fusion</a></li>
+<li><a href="https://www.qemu.org">QEMU</a></li>
+<li><a href="https://azure.microsoft.com/ko-kr/services/virtual-machines">Virtual PC, Virtual Server (Microsoft)</a></li>
+<li><a href="https://www.virtualbox.org">Virtual Box (Sun)</a></li>
+<li><a href="https://www.parallels.com/kr/">Parallels Workstation, Parallels Descktop</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#하이퍼바이저-hypervisor-란">하이퍼바이저(Hypervisor)란?</a>
+<ul>
+<li><a href="#의미">의미</a></li>
+<li><a href="#분류">분류</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+</body>
+
+</html>
