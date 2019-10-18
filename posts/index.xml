@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on 끄적끄적..</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 17 Oct 2019 11:04:58 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 11:22:21 +0900</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,16 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Bare Metal</title>
+      <link>/posts/bare-metal/</link>
+      <pubDate>Fri, 18 Oct 2019 11:22:21 +0900</pubDate>
+      
+      <guid>/posts/bare-metal/</guid>
+      <description>베이메탈(bare metal)이란? 의미  어떤 소프트웨어도 담겨 있지 않은 하드웨어 하드웨어만을 구매할 수 있는 제품
+  가상화 관련  호스트형 가상화 vs. 베어메탈 가상화 비교  호스트형 가상화  하드웨어 상에 호스트 운영체제가 있고, 그 위에 가상머신 구현 대부분 호스트 운영체제가 커널수준에서의 가상화 기술 지원  베어메탈 가상화  호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현 클라우드 환경에서의 베어메탈  물리적인 서버를 직접 구매해서 설치하는 것이 아님 사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공     가상서버와 베어메탈 (출처.</description>
     </item>
     
     <item>
