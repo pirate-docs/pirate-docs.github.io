@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on 끄적끄적..</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 19 Oct 2019 11:04:58 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2019 15:10:34 +0900</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>/posts/jvm/</link>
+      <pubDate>Tue, 22 Oct 2019 15:10:34 +0900</pubDate>
+      
+      <guid>/posts/jvm/</guid>
+      <description>JVM(Java Virtual Machine)이란? 역할  어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것  자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행하는 것 Java와 OS 사이의 중개자 역할 수행  프로그램 메모리 관리와 최적화하는 것  메모리 관리, Garbage Collection을 수행함    JVM (출처. What is the JVM - JavaWorld)  Java 프로그램 실행과정   JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음  JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함</description>
     </item>
     
     <item>
