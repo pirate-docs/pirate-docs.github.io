@@ -65,7 +65,8 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Thu, 17 Oct 2019 08:46:43 +0900</pubDate>
       
       <guid>/docs/cloud/PaaS/</guid>
-      <description>Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.</description>
+      <description>PaaS (Platform as a Service) 정의  서비스 제공자가 사용자에게 플랫폼을 제공함으로써 비즈니스 애플리케이션을 개발, 실행, 관리할 수 있도록 하는 것 사용자가 소프트웨어 개발 프로세스에 필요한 인프라를 구축하고 유지할 필요없음
+  Platform as a Service (출처. ZOHO)  특징  앱 개발 및 시작과 관련된 인프라를 만들고 유지보수하는 복잡함 없이 고객이 애플리케이션 개발, 실행, 관리할 수 있도록 플랫폼으로 제공 서비스를 개발할 수 있는 안정적인 환경과 그 환경을 이용하는 응용 프로그램을 개발할 수 있는 api까지 제공  장점  플랫폼에서 제공되는 미리 코딩된 애플리케이션 구성요소를 이용해 새로운 앱을 쉽게 개발할 수 있음 컴퓨터, 모바일 및 브라우저와 같은 여러 플랫폼용 개발 옵션 등의 제공으로 플랫폼 간 앱을 더 빠르고 쉽게 개발할 수 있음 인터넷을 통한 개발 환경으로, 팀 멤버가 원격 위치에 있더라도 프로젝트 함께 작업 가능 통합환경 내에서 빌드, 테스트, 배포, 관리, 업데이트의 웹 애플리케이션 수명 주기를 효율적으로 관리  단점  정보 보안의 문제가 있을 수 있음 제공업체의 인프라 환경 이슈로 인해 서비스에 영향을 미칠 수 있음 제공업체의 개발 전략, 프로그래밍 언어, 기타 영역을 변경할 경우에 대한 대책이 필요할 수 있음  사용 사례  API 개발 및 관리 : 애플리케이션 프로그래밍 인터페이스와 마이크로서비스 개발, 실행, 관리, 보호를 위한 api 개발 및 관리 비즈니스 분석 : PaaS로 제공되는 툴을 이용한, 데이터 분석 및 행동 패턴 예측</description>
     </item>
     
     <item>
@@ -74,8 +75,17 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Thu, 17 Oct 2019 08:44:35 +0900</pubDate>
       
       <guid>/docs/cloud/SaaS/</guid>
-      <description> Introduction Ferre hinnitibus erat accipitrem dixi Troiae tollens Lorem markdownum, a quoque nutu est quodcumque mandasset veluti. Passim inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet non, mortali undas. Omnis pharetramque gramen portentificisque membris servatum novabis fallit de nubibus atque silvas mihi. Dixit repetitaque Quid; verrit longa; sententia mandat quascumque nescio solebat litore; noctes. Hostem haerentem circuit plenaque tamen.
- Pedum ne indigenae finire invergens carpebat Velit posses summoque De fumos illa foret  Est simul fameque tauri qua ad </description>
+      <description>SaaS (Software as a Service) 정의  클라우드 환경에서 동작하는 응용프로그램을 서비스 형태로 제공하는 것 주문형 소프트웨어(on-demand software)라고도 불림  Software as a Service (출처. v-comply)  특징  네트워크 기반으로 접근하고 관리하는, 상업적으로 사용 가능한 소프트웨어 사용자가 웹을 통해 애플리케이션에 접근하고, 중앙에서 활동 관리 1:N 모델(single instance, multi-tenant)에 가까움 (아키텍처, 가격, 파트너링, 관리 등이 포함)  장점  퍼블릭 클라우드에 있는 소프트웨어를 웹을 통해 언제 어디서나 사용할 수 있음 네트워크를 통해 서비스되므로 사용하기 쉽고, 최신 소프트웨어 업데이트를 빠르게 제공받을 수 있음  단점  데이터 처리 및 보관이 외부 클라우드 서비스에서 이루어지기 때문에 데이터 노출의 위험이 있을 수 있음 인터넷을 통해 접속 가능하므로, 인프라가 외부와 단절되어 있거나 통신 환경이 열악한 곳에서는 이용할 수 없음  서비스 형태 로그인 타입  아이디와 패스워드를 부여받고 홈페이지 통해 서비스를 이용하는 형태 별도의 설치 시간이 필요없고, 누구나 빠르게 서비스에 접근할 수 있음 대표적인 사례 : Google Apps, MS office 365, 더존 클라우드팩스, 한컴 넷피스24 등  API 타입  퍼블릭 클라우드 속에 설치되어있는 소프트웨어 패키지를 api로 제공받아, 기업서버(ERP)에 적용해서 서비스를 이용하는 형태 기업의 ERP 또는 CRM과의 연동성이 관건 API 타입은 특정 시스템과의 연동이 반드시 필요하기 때문에 일반 사용자용으로 제공하지 않음  대표적인 서비스  Gmail Google Apps</description>
+    </item>
+    
+    <item>
+      <title>OOP (Object-Oriented Programming)</title>
+      <link>/posts/oop/</link>
+      <pubDate>Sat, 19 Oct 2019 11:04:58 +0900</pubDate>
+      
+      <guid>/posts/oop/</guid>
+      <description>객체 지향 프로그래밍이란?  컴퓨터 프로그래밍의 패러다임 중 하나 프로그램을 명령어의 목록으로 보는 시각에서 벗어나, 여러 개의 독립된 단위(객체)로 파악하고자 하는 것 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있음 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용됨 보다 직관적인 코드 분석을 가능하게 하는 장점을 가지고 있음
+  구성요소  클래스 (Class)  사용자 정의 데이터형 (User defined data type) 같은 종류(또는 문제 해결을 위한)의 집단에 속하는 속성(attribute)과 행위(behavior)를 정의한 것  객체 (Object)  클래스의 인스턴스(실제로 메모리에 할당된 것) 자신 고유의 속성(attribute)을 가지며 클래스에서 정의한 행위(behavior)를 수행할 수 있음 객체의 행위는 클래스에 정의된 행위에 대한 정의를 공유함으로써, 메모리를 경제적으로 사용함  메서드 (Method)  클래스로부터 생성된 객체를 사용하는 방법, 객체에 명령을 내리는 메시지 한 객체의 서브루틴(subroutine) 형태로 객체의 속성을 조작하는데 사용됨   특징 캡슐화 (Encapsulation)  필요한 속성(attribute)와 행위(methods)를 하나로 묶음 일부를 외부에서 사용하지 못하도록 은닉함  정보은닉 (Information Hiding)  프로그램의 세부 구현을 외부로 드러나지 않도록 특정 모듈 내부로 감추는 것 내부 구현은 감춰서 모듈 내에서의 응집도를 높이고, 외부 노출을 최소화하여 모듈 간의 결합도를 떨어뜨려 유연함과 유지보수성을 높임 접근 제한자 종류  public : 클래스 외부에서 사용 가능 protected : 다른 클래스에는 노출되지 않지만, 상속받은 자식 클래스에는 노출됨 private : 클래스 내부에서만 사용되며 외부로 노출되지 않음     Example ↕  public class Student { private String name; public void setName(String name) { this.</description>
     </item>
     
     <item>
@@ -85,7 +95,26 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>/posts/bare-metal/</guid>
       <description>베이메탈(bare metal)이란? 의미  어떤 소프트웨어도 담겨 있지 않은 하드웨어 하드웨어만을 구매할 수 있는 제품
-  가상화 관련  호스트형 가상화 vs. 베어메탈 가상화 비교  호스트형 가상화  하드웨어 상에 호스트 운영체제가 있고, 그 위에 가상머신 구현 대부분 호스트 운영체제가 커널수준에서의 가상화 기술 지원  베어메탈 가상화  호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현 클라우드 환경에서의 베어메탈  물리적인 서버를 직접 구매해서 설치하는 것이 아님 사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공     가상서버와 베어메탈 (출처.</description>
+  가상화 관련 (호스트형 가상화 vs. 베어메탈 가상화)  호스트형 가상화  하드웨어 상에 호스트 운영체제가 있고, 그 위에 가상머신 구현 대부분 호스트 운영체제가 커널수준에서의 가상화 기술 지원  베어메탈 가상화  호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현 하드웽어의 리소스를 공유하는 가상화 방식이 아닌, 하드웨어의 모든 성능을 사용할 수 있는 방식 클라우드 환경에서의 베어메탈  물리적인 서버를 직접 구매해서 설치하는 것이 아님 사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공    가상서버와 베어메탈 (출처.</description>
+    </item>
+    
+    <item>
+      <title>CRM</title>
+      <link>/posts/crm/</link>
+      <pubDate>Thu, 17 Oct 2019 11:04:58 +0900</pubDate>
+      
+      <guid>/posts/crm/</guid>
+      <description> CRM(Customer relationship management)란? 의미  소비자들을 자신의 고객으로 만들고, 이를 장기간 유지하고자 하는 경영방식 기업들이 고객과의 관계 관리, 고객 확보, 고객, 판매인, 협력자와 내부 정보를 분석하고 저장하는데 사용하는 여러 분야를 아우르는 방법
+  CRM 4가지 측면  지속적인 관계를 얻기 위한 고객 관리 고객 개별적 특성에 따른 관리 정보기술에 의한 관리 전사적 차원에서의 관리  기본 요소  지식 (Know) : 시장과 고객에 대한 이해 목표 (Target) : 최적 서비스 개발 판매 (Sell) : 신규 고객 창출 서비스 : 기존 고객 유지  기능  고객분석 : 고객 세분화, 이탈고객 분석, 고객가치 분석 캠페인 관리 : 캠페인 기획부터 효과분석까지 수행 고객응대 : 콜 센터, 영업자동화 및 고객지원센터, 텔레마케팅 등 수행 고객정보 : 데이터 웨어하우스, 데이터 마이닝 등 분석작업 수행 컨설팅 및 통합 : 분석한 고객 데이터의 기반이 되는 전략컨설팅과 시스템 통합 수행  기대효과  고객관계 강화를 통한 수익성 증대 타겟 마케팅 가능 잠재고객의 프로파일 정보를 이용한 전략적 영업정보화 고객의 수익 기여도에 따른 전략수립 우량고객의 이탈 방지, 이탈가능 고객 집중 관리 휴면고객 활성화 교차판매, 상향판매, 재판매 등을 통한 고객가치 증대  적용분야  판매 : 소매점 판매, 현장 판매, 통신 판매, 웹 판매 마케팅 : 캠페인, 컨텐츠 개발 서비스 : 콜센터, 웹서비스, 무선서비스 개발 : 신상품 개발, 사업 개발  </description>
+    </item>
+    
+    <item>
+      <title>ERM</title>
+      <link>/posts/erp/</link>
+      <pubDate>Thu, 17 Oct 2019 11:04:58 +0900</pubDate>
+      
+      <guid>/posts/erp/</guid>
+      <description>ERP(Enterprise Resource Planning)란? 의미  회계, 조달, 프로젝트 관리, 위험 관리 및 규정 준수, 공급망 운영과 같은 일상적인 비즈니스 활동을 통합 관리하는 소프트웨어  ERP (출처. 한국직업능력교육원 공식블로그)  (효과를 보기 위한) 전제조건  기업 전체의 인적, 물적 자원의 흐름이 사람의 손으로 계산하기 어려울 정도로 복잡하고 다수일때 재고관리나 물류관리 등을 실시간에 가깝게 하면 할 수록 재고비용을 절감 가능할때 조직 전체의 의사결정을 신속하게 하기 위한 자료 정리가 필요할때  도입 목적  효율적인 전사 공통 업무 시스템 구축 최신 정보 기술 도입 시스템 구축, 운용 비용 절감  특징  글로벌 환경에 쉽게 대응할 수 있도록 해줌  다국적, 다통화, 다언어를 지원해주는 소프트웨어 패키지로 국제적 환경에 쉽게 적응할 수 있도록 지원</description>
     </item>
     
     <item>

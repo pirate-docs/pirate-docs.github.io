@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.fe5fe0c85c418a8885b98b64abc57880d07012d3e313ab3ad49f621ce505688d.js" integrity="sha256-/l/gyFxBioiFuYtkq8V4gNBwEtPjE6s61J9iHOUFaI0="></script>
+<script defer src="/search.min.e590d10e6cd41bf9f3c4036bd3cf0a8ef376a528fe0d29af0392490c50bfcb39.js" integrity="sha256-5ZDRDmzUG/nzxANr088KjvN2pSj&#43;DSmvA5JJDFC/yzk="></script>
 
 <link rel="alternate" type="application/rss+xml" href="/docs/cloud/index.xml" title="끄적끄적.." />
 <!--
@@ -53,10 +53,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/cloud/"class=active><strong>Cloud Service</strong></a>
 
 <ul>
-<li><a href="/docs/cloud/SaaS/">SaaS</a></li>
-<li><a href="/docs/cloud/PaaS/">PaaS</a></li>
 <li><a href="/docs/cloud/IaaS/">IaaS</a></li>
+<li><a href="/docs/cloud/PaaS/">PaaS</a></li>
+<li><a href="/docs/cloud/SaaS/">SaaS</a></li>
 </ul></li>
+<li><a href="/docs/java/"><strong>Java</strong></a></li>
 <li><a href="/docs/example/"><strong>Example Site</strong></a></li>
 <li><a href="/docs/example/table-of-contents/">Table of Contents</a>
 
@@ -102,7 +103,83 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"><p>aaaaaaaaa</p>
+<article class="markdown">
+
+<h1 id="클라우드-컴퓨팅">클라우드 컴퓨팅</h1>
+
+<h2 id="특징요소">특징요소</h2>
+
+<p>(출처. NIST, National Institute of Standards and Technology, 미국표준기술연구소)</p>
+
+<h3 id="on-demand-self-service">On-demand self-service</h3>
+
+<ul>
+<li>사용자가 서비스 관리자의 개입없이 원하는 시점에 서비스를 바로 사용할 수 있어야 함</li>
+<li>서버 시간과 네트워크 스토리지 같은 컴퓨팅 능력을 독자적으로 준비할 수 있어야 함</li>
+</ul>
+
+<h3 id="broad-network-access">Broad network access</h3>
+
+<ul>
+<li>클라우드 서비스 제공자는 네트워크 기반으로 서비스에 접속할 수 있게 해야 함</li>
+<li>다양한 클라이언트에 의해 접속 가능해야 함</li>
+</ul>
+
+<h3 id="resource-pooling">Resource pooling</h3>
+
+<ul>
+<li>물리적인 자원이나 가상화된 자원은 풀(Pool)로 관리되며, 사용자 요청에 의해 할당되거나 다시 풀로 반환되어야 함</li>
+<li>자원의 물리적인 위치, 크기 등에 대해서는 모르고, 자원을 추상화시켜서 제공</li>
+</ul>
+
+<h3 id="rapid-elasticity">Rapid elasticity</h3>
+
+<ul>
+<li>사용자는 자원을 무한대로 확장할 수 있거나 필요한 만큼의 수준으로 줄일 수 있어야 함</li>
+<li>이러한 작업은 수 분 이내로 할 수 있어야 함</li>
+</ul>
+
+<h3 id="measured-service">Measured service</h3>
+
+<ul>
+<li>자원의 사용량이 실시간으로 수집되고 모니터링 되어야 함</li>
+<li>사용량에 따른 과금을 할 수 있으며, 자원의 부족에 따른 추가 요청 등의 작업을 할 수 있어야 함</li>
+</ul>
+
+<h2 id="서비스-모델">서비스 모델</h2>
+
+<h3 id="iaas-infrastructure-as-a-service">IaaS (Infrastructure as a Service)</h3>
+
+<ul>
+<li>서버, 스토리지, 네트워크를 필요에 따라 인프라 자원을 사용할 수 있게 클라우드 서비스를 제공하는 형태</li>
+</ul>
+
+<h3 id="paas-platform-as-a-service">PaaS (Platform as a Service)</h3>
+
+<ul>
+<li>사용자가 비즈니스 애플리케이션을 개발, 실행, 관리할 수 있도록 플랫폼을 제공하는 형태</li>
+</ul>
+
+<h3 id="saas-service-as-a-service">SaaS (Service as a Service)</h3>
+
+<ul>
+<li>클라우드 환경에서 동작하는 응용프로그램을 서비스로 제공하는 형태</li>
+</ul>
+
+<div style="text-align:center" >
+    <img src="/static/images/cloud/servicemodel.png" />
+    <div><b>Service Model</b> (출처. <a href="https://azure.microsoft.com/ko-kr/overview/what-is-saas/">Azure (Microsoft)</a>)</div>
+</div>
+
+<h2 id="배포-모델">배포 모델</h2>
+
+<h3 id="private-cloud">Private cloud</h3>
+
+<h3 id="community-cloud">Community cloud</h3>
+
+<h3 id="public-cloud">Public cloud</h3>
+
+<h3 id="hybrid-cloud">Hybrid cloud</h3>
 </article>
 
       
@@ -125,6 +202,37 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#클라우드-컴퓨팅">클라우드 컴퓨팅</a>
+<ul>
+<li><a href="#특징요소">특징요소</a>
+<ul>
+<li><a href="#on-demand-self-service">On-demand self-service</a></li>
+<li><a href="#broad-network-access">Broad network access</a></li>
+<li><a href="#resource-pooling">Resource pooling</a></li>
+<li><a href="#rapid-elasticity">Rapid elasticity</a></li>
+<li><a href="#measured-service">Measured service</a></li>
+</ul></li>
+<li><a href="#서비스-모델">서비스 모델</a>
+<ul>
+<li><a href="#iaas-infrastructure-as-a-service">IaaS (Infrastructure as a Service)</a></li>
+<li><a href="#paas-platform-as-a-service">PaaS (Platform as a Service)</a></li>
+<li><a href="#saas-service-as-a-service">SaaS (Service as a Service)</a></li>
+</ul></li>
+<li><a href="#배포-모델">배포 모델</a>
+<ul>
+<li><a href="#private-cloud">Private cloud</a></li>
+<li><a href="#community-cloud">Community cloud</a></li>
+<li><a href="#public-cloud">Public cloud</a></li>
+<li><a href="#hybrid-cloud">Hybrid cloud</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
 

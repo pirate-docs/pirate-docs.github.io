@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Bare Metal" />
 <meta property="og:description" content="베이메탈(bare metal)이란? 의미  어떤 소프트웨어도 담겨 있지 않은 하드웨어 하드웨어만을 구매할 수 있는 제품
-  가상화 관련  호스트형 가상화 vs. 베어메탈 가상화 비교  호스트형 가상화  하드웨어 상에 호스트 운영체제가 있고, 그 위에 가상머신 구현 대부분 호스트 운영체제가 커널수준에서의 가상화 기술 지원  베어메탈 가상화  호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현 클라우드 환경에서의 베어메탈  물리적인 서버를 직접 구매해서 설치하는 것이 아님 사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공     가상서버와 베어메탈 (출처." />
+  가상화 관련 (호스트형 가상화 vs. 베어메탈 가상화)  호스트형 가상화  하드웨어 상에 호스트 운영체제가 있고, 그 위에 가상머신 구현 대부분 호스트 운영체제가 커널수준에서의 가상화 기술 지원  베어메탈 가상화  호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현 하드웽어의 리소스를 공유하는 가상화 방식이 아닌, 하드웨어의 모든 성능을 사용할 수 있는 방식 클라우드 환경에서의 베어메탈  물리적인 서버를 직접 구매해서 설치하는 것이 아님 사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공    가상서버와 베어메탈 (출처." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/bare-metal/" />
 <meta property="article:published_time" content="2019-10-18T11:22:21+09:00" />
-<meta property="article:modified_time" content="2019-10-18T13:44:59+09:00" />
+<meta property="article:modified_time" content="2019-10-18T13:49:31+09:00" />
 <title>Bare Metal | 끄적끄적..</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.fe5fe0c85c418a8885b98b64abc57880d07012d3e313ab3ad49f621ce505688d.js" integrity="sha256-/l/gyFxBioiFuYtkq8V4gNBwEtPjE6s61J9iHOUFaI0="></script>
+<script defer src="/search.min.e590d10e6cd41bf9f3c4036bd3cf0a8ef376a528fe0d29af0392490c50bfcb39.js" integrity="sha256-5ZDRDmzUG/nzxANr088KjvN2pSj&#43;DSmvA5JJDFC/yzk="></script>
 
 <!--
 Made with Book Theme
@@ -53,10 +53,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/cloud/"><strong>Cloud Service</strong></a>
 
 <ul>
-<li><a href="/docs/cloud/SaaS/">SaaS</a></li>
-<li><a href="/docs/cloud/PaaS/">PaaS</a></li>
 <li><a href="/docs/cloud/IaaS/">IaaS</a></li>
+<li><a href="/docs/cloud/PaaS/">PaaS</a></li>
+<li><a href="/docs/cloud/SaaS/">SaaS</a></li>
 </ul></li>
+<li><a href="/docs/java/"><strong>Java</strong></a></li>
 <li><a href="/docs/example/"><strong>Example Site</strong></a></li>
 <li><a href="/docs/example/table-of-contents/">Table of Contents</a>
 
@@ -120,10 +121,7 @@ https://github.com/alex-shpak/hugo-book
 <li>하드웨어만을 구매할 수 있는 제품<br /></li>
 </ul>
 
-<h3 id="가상화-관련">가상화 관련</h3>
-
-<ul>
-<li>호스트형 가상화 vs. 베어메탈 가상화 비교
+<h3 id="가상화-관련-호스트형-가상화-vs-베어메탈-가상화">가상화 관련 (호스트형 가상화 vs. 베어메탈 가상화)</h3>
 
 <ul>
 <li>호스트형 가상화
@@ -136,6 +134,7 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li>호스트 운영체제없이 하드웨어 상에 하이퍼바이저가 바로 설치되고, 그 위에 가상머신 구현</li>
+<li>하드웽어의 리소스를 공유하는 가상화 방식이 아닌, 하드웨어의 모든 성능을 사용할 수 있는 방식</li>
 <li>클라우드 환경에서의 베어메탈
 
 <ul>
@@ -143,11 +142,10 @@ https://github.com/alex-shpak/hugo-book
 <li>사용자가 구성한 표준 아키텍처의 하드웨어를 가상서버와 동일한 서비스 형태로 제공</li>
 </ul></li>
 </ul></li>
-</ul></li>
 </ul>
 
 <div style="text-align:center" >
-    <img src="/static/images/baremetal.png" />
+    <img src="/static/images/cloud/baremetal.png" />
     <div><b>가상서버와 베어메탈</b> (출처. <a href="http://www.ciokorea.com/news/35402">CIO News</a>)</div>
 </div>
 </article>
@@ -157,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a class="flex align-center" href="https://github.com/pirate-docs/hugo-theme/commit/d71a034ca05ea044db96dda97dd0d8e3b4c37847" title='Last modified Oct 18, 2019 by andrew' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/pirate-docs/hugo-theme/commit/c7b30986a58464c128a0d07d903419f3b69e2924" title='Last modified Oct 18, 2019 by andrew' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" alt="Changed" />
       <span>Oct 18, 2019</span>
     </a>
@@ -181,7 +179,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#베이메탈-bare-metal-이란">베이메탈(bare metal)이란?</a>
 <ul>
 <li><a href="#의미">의미</a></li>
-<li><a href="#가상화-관련">가상화 관련</a></li>
+<li><a href="#가상화-관련-호스트형-가상화-vs-베어메탈-가상화">가상화 관련 (호스트형 가상화 vs. 베어메탈 가상화)</a></li>
 </ul></li>
 </ul></li>
 </ul>
