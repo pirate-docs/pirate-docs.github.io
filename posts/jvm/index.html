@@ -8,7 +8,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/jvm/" />
 <meta property="article:published_time" content="2019-10-22T15:10:34+09:00" />
-<meta property="article:modified_time" content="2019-10-22T15:10:34+09:00" />
+<meta property="article:modified_time" content="2019-10-23T08:38:24+09:00" />
 <title>JVM | 끄적끄적..</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.53df8dee1f77541ac8abccf9e2ae9b322ffb8e1f6d49dd6fe9f459efa92a706a.js" integrity="sha256-U9&#43;N7h93VBrIq8z54q6bMi/7jh9tSd1v6fRZ76kqcGo="></script>
+<script defer src="/search.min.40ecf94fc831a1e0ec5311a5201e795beadaa1019b084e031b85f4accf5c5b34.js" integrity="sha256-QOz5T8gxoeDsUxGlIB55W&#43;raoQGbCE4DG4X0rM9cWzQ="></script>
 
 <!--
 Made with Book Theme
@@ -159,11 +159,103 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="jvm-구성">JVM 구성</h3>
 
 <ul>
-<li></li>
+<li><p>Class Loader</p>
+
+<ul>
+<li><p>역할</p>
+
+<ul>
+<li><p>Loading</p>
+
+<h5 id="클래스-이름-상속관계-클래스-타입-class-interface-enum-메서드-생성자-멤버변수-상수-등에-대한-정보를-로딩해서-바이너리-데이터로-변경">클래스 이름, 상속관계, 클래스 타입(class, interface, enum), 메서드, 생성자, 멤버변수, 상수 등에 대한 정보를 로딩해서 바이너리 데이터로 변경</h5></li>
+
+<li><p>Linking</p>
+
+<h5 id="verification-preparation-resolution-단계를-거쳐-바이트코드-검증-및-메모리-할당-수행">Verification → Preparation → Resolution 단계를 거쳐 바이트코드 검증 및 메모리 할당 수행</h5></li>
+
+<li><p>Initialization</p>
+
+<h5 id="static-block-초기화와-함께-static-데이터들을-할당함-top-bottom-방식">Static block 초기화와 함께 static 데이터들을 할당함 (top → bottom 방식)</h5></li>
+</ul></li>
+
+<li><p>구성</p>
+
+<ul>
+<li><p>Bootstrap Class Loader</p>
+
+<h5 id="jvm이-실행될때-가장-먼저-실행되는-클래스로더">- JVM이 실행될때 가장 먼저 실행되는 클래스로더</h5>
+
+<h5 id="java-실행에-필요한-기본적인-클래스-로딩-java-home-jre-lib-rt-jar">- Java 실행에 필요한 기본적인 클래스 로딩 ($JAVA_HOME/jre/lib/rt.jar)</h5>
+
+<h5 id="native-언어로-구성되어-있음">- Native 언어로 구성되어 있음</h5></li>
+
+<li><p>Extension Class Loader (Java9 → Platform Class Loader)</p>
+
+<h5 id="bootstrap-class-loader의-자식클래스로-일반적인-java-확장-클래스-로딩-담당">- Bootstrap Class Loader의 자식클래스로 일반적인 java 확장 클래스 로딩 담당</h5>
+
+<h5 id="classpath-설정이-없더라도-로딩됨-java-home-jre-lib-ext-혹은-java-ext-dirs에-등록된-클래스파일">- Classpath 설정이 없더라도 로딩됨 ($JAVA_HOME/jre/lib/ext 혹은 java.ext.dirs에 등록된 클래스파일)</h5></li>
+
+<li><p>Application Class Loader (Java9 → System Class Loader)</p>
+
+<h5 id="classpath에-정의되어있거나-cp-classpath로-지정된-클래스들이-로딩됨">- Classpath에 정의되어있거나, -cp, -classpath로 지정된 클래스들이 로딩됨</h5>
+
+<h5 id="애플리케이션의-클래스들을-로드함">- 애플리케이션의 클래스들을 로드함</h5></li>
+
+<li><p>User-Defined Class Loader</p>
+
+<h5 id="애플리케이션-코드에-사용자가-직접-정의해서-사용하는-클래스-로더">- 애플리케이션 코드에 사용자가 직접 정의해서 사용하는 클래스 로더</h5></li>
+</ul></li>
+
+<li><p>원칙</p>
+
+<ul>
+<li><p>위임 원칙 (Delegation Principle)</p>
+
+<h5 id="클래스-로딩이-필요한-시점에-3가지-기본-클래스로더의-윗-방향으로-클래스-로딩을-위임">클래스 로딩이 필요한 시점에 3가지 기본 클래스로더의 윗 방향으로 클래스 로딩을 위임</h5>
+
+<h5 id="classloaderrunner-internal-class">ClassLoaderRunner → Internal Class →</h5></li>
+
+<li><p>가시범위 원칙 (Visibility Principle)</p>
+
+<h5 id="하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-볼-수-있지만-반대의-경우는-불가능">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 볼 수 있지만, 반대의 경우는 불가능</h5></li>
+
+<li><p>유일성 원칙 (Uniqueness Principle)</p>
+
+<h5 id="하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-다시-로딩하지-않도록-함-유일성-보장">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 다시 로딩하지 않도록 함 (유일성 보장)</h5></li>
+</ul></li>
+</ul></li>
+
+<li><p>Execution Engine</p>
+
+<ul>
+<li>로드된 클래스의 바이트코드를 실행하는 Runtime Module
+<br /></li>
+</ul>
+
+<p>To be continued</p></li>
+
+<li><p>Interpreter</p></li>
+
+<li><p>JIT (Just In Time)</p></li>
+
+<li><p>Garbage Collector</p></li>
 </ul>
 </article>
 
       
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/pirate-docs/pirate-posts/commit/0c2eff51faea5a1d14b2a760d58326fea8bad97e" title='Last modified Oct 23, 2019 by andrew' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" alt="Changed" />
+      <span>Oct 23, 2019</span>
+    </a>
+  </div>
+  
+  
+</div>
+
 
       
     </div>
@@ -180,7 +272,27 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#역할">역할</a></li>
 <li><a href="#java-프로그램-실행과정">Java 프로그램 실행과정</a></li>
-<li><a href="#jvm-구성">JVM 구성</a></li>
+<li><a href="#jvm-구성">JVM 구성</a>
+<ul>
+<li>
+<ul>
+<li><a href="#클래스-이름-상속관계-클래스-타입-class-interface-enum-메서드-생성자-멤버변수-상수-등에-대한-정보를-로딩해서-바이너리-데이터로-변경">클래스 이름, 상속관계, 클래스 타입(class, interface, enum), 메서드, 생성자, 멤버변수, 상수 등에 대한 정보를 로딩해서 바이너리 데이터로 변경</a></li>
+<li><a href="#verification-preparation-resolution-단계를-거쳐-바이트코드-검증-및-메모리-할당-수행">Verification → Preparation → Resolution 단계를 거쳐 바이트코드 검증 및 메모리 할당 수행</a></li>
+<li><a href="#static-block-초기화와-함께-static-데이터들을-할당함-top-bottom-방식">Static block 초기화와 함께 static 데이터들을 할당함 (top → bottom 방식)</a></li>
+<li><a href="#jvm이-실행될때-가장-먼저-실행되는-클래스로더">- JVM이 실행될때 가장 먼저 실행되는 클래스로더</a></li>
+<li><a href="#java-실행에-필요한-기본적인-클래스-로딩-java-home-jre-lib-rt-jar">- Java 실행에 필요한 기본적인 클래스 로딩 ($JAVA_HOME/jre/lib/rt.jar)</a></li>
+<li><a href="#native-언어로-구성되어-있음">- Native 언어로 구성되어 있음</a></li>
+<li><a href="#bootstrap-class-loader의-자식클래스로-일반적인-java-확장-클래스-로딩-담당">- Bootstrap Class Loader의 자식클래스로 일반적인 java 확장 클래스 로딩 담당</a></li>
+<li><a href="#classpath-설정이-없더라도-로딩됨-java-home-jre-lib-ext-혹은-java-ext-dirs에-등록된-클래스파일">- Classpath 설정이 없더라도 로딩됨 ($JAVA_HOME/jre/lib/ext 혹은 java.ext.dirs에 등록된 클래스파일)</a></li>
+<li><a href="#classpath에-정의되어있거나-cp-classpath로-지정된-클래스들이-로딩됨">- Classpath에 정의되어있거나, -cp, -classpath로 지정된 클래스들이 로딩됨</a></li>
+<li><a href="#애플리케이션의-클래스들을-로드함">- 애플리케이션의 클래스들을 로드함</a></li>
+<li><a href="#애플리케이션-코드에-사용자가-직접-정의해서-사용하는-클래스-로더">- 애플리케이션 코드에 사용자가 직접 정의해서 사용하는 클래스 로더</a></li>
+<li><a href="#클래스-로딩이-필요한-시점에-3가지-기본-클래스로더의-윗-방향으로-클래스-로딩을-위임">클래스 로딩이 필요한 시점에 3가지 기본 클래스로더의 윗 방향으로 클래스 로딩을 위임</a></li>
+<li><a href="#classloaderrunner-internal-class">ClassLoaderRunner → Internal Class →</a></li>
+<li><a href="#하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-볼-수-있지만-반대의-경우는-불가능">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 볼 수 있지만, 반대의 경우는 불가능</a></li>
+<li><a href="#하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-다시-로딩하지-않도록-함-유일성-보장">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 다시 로딩하지 않도록 함 (유일성 보장)</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
