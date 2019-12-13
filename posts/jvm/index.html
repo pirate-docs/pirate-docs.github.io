@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="JVM" />
-<meta property="og:description" content="JVM(Java Virtual Machine)이란? 역할  어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것  자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행하는 것 Java와 OS 사이의 중개자 역할 수행  프로그램 메모리 관리와 최적화하는 것  메모리 관리, Garbage Collection을 수행함    JVM (출처. What is the JVM - JavaWorld)  Java 프로그램 실행과정   JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음  JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함" />
+<meta property="og:description" content="JVM(Java Virtual Machine)이란? 역할 어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것
+프로그램 메모리 관리와 최적화하는 것
+ 자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행 Java와 OS 사이의 중개자 역할 수행 메모리 관리, Garbage Collection을 수행   JVM (출처. What is the JVM - JavaWorld)  Java 프로그램 실행과정   JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음
+(JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/jvm/" />
 <meta property="article:published_time" content="2019-10-22T15:10:34+09:00" />
-<meta property="article:modified_time" content="2019-10-23T08:38:24+09:00" />
+<meta property="article:modified_time" content="2019-11-06T14:45:46+09:00" />
 <title>JVM | 끄적끄적..</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -16,7 +19,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.40ecf94fc831a1e0ec5311a5201e795beadaa1019b084e031b85f4accf5c5b34.js" integrity="sha256-QOz5T8gxoeDsUxGlIB55W&#43;raoQGbCE4DG4X0rM9cWzQ="></script>
+<script defer src="/search.min.09f07644b7d9c4d4e1e59c2995743a7327e26299f140fc1d5575e2e9500e711b.js" integrity="sha256-CfB2RLfZxNTh5ZwplXQ6cyfiYpnxQPwdVXXi6VAOcRs="></script>
 
 <!--
 Made with Book Theme
@@ -57,21 +60,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/cloud/SaaS/">SaaS</a></li>
 </ul></li>
 <li><a href="/docs/java/"><strong>Java</strong></a></li>
-<li><a href="/docs/example/"><strong>Example Site</strong></a></li>
-<li><a href="/docs/example/table-of-contents/">Table of Contents</a>
-
-<ul>
-<li><a href="/docs/example/table-of-contents/with-toc/">With ToC</a></li>
-<li><a href="/docs/example/table-of-contents/without-toc/">Without ToC</a><br /></li>
-</ul></li>
-<li><strong>Shortcodes</strong></li>
-<li><a href="/docs/shortcodes/buttons/">Buttons</a></li>
-<li><a href="/docs/shortcodes/expand/">Expand</a></li>
-<li><a href="/docs/shortcodes/hints/">Hints</a></li>
-<li><a href="/docs/shortcodes/katex/">Katex</a></li>
-<li><a href="/docs/shortcodes/mermaid/">Mermaid</a></li>
-<li><a href="/docs/shortcodes/tabs/">Tabs</a><br /></li>
-<li><a href="/posts/"><strong>Blog</strong></a></li>
+<li><a href="/docs/kubernetes/"><strong>Kubernetes</strong></a></li>
 </ul>
 
 
@@ -111,23 +100,18 @@ https://github.com/alex-shpak/hugo-book
 </header>
 <article class="markdown">
 
-<h2 id="jvm-java-virtual-machine-이란">JVM(Java Virtual Machine)이란?</h2>
+<h1 id="jvm-java-virtual-machine-이란">JVM(Java Virtual Machine)이란?</h1>
 
-<h3 id="역할">역할</h3>
+<h2 id="역할">역할</h2>
+
+<p>어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것<br />
+프로그램 메모리 관리와 최적화하는 것</p>
 
 <ul>
-<li>어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것
-
-<ul>
-<li>자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행하는 것</li>
+<li>자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행</li>
 <li>Java와 OS 사이의 중개자 역할 수행</li>
-</ul></li>
-<li>프로그램 메모리 관리와 최적화하는 것
-
-<ul>
-<li>메모리 관리, Garbage Collection을 수행함
+<li>메모리 관리, Garbage Collection을 수행
 <br /></li>
-</ul></li>
 </ul>
 
 <div style="text-align:center" >
@@ -135,15 +119,12 @@ https://github.com/alex-shpak/hugo-book
     <div><b>JVM</b> (출처. <a href="https://www.javaworld.com/article/3272244/what-is-the-jvm-introducing-the-java-virtual-machine.html">What is the JVM - JavaWorld</a>)</div>
 </div>
 
-<h3 id="java-프로그램-실행과정">Java 프로그램 실행과정</h3>
+<h2 id="java-프로그램-실행과정">Java 프로그램 실행과정</h2>
 
 <blockquote>
 <ol>
-<li>JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음
-
-<ul>
-<li>JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함<br /></li>
-</ul></li>
+<li>JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음<br />
+(JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함)<br /></li>
 <li>자바 컴파일러(javac)가 소스코드(.java)를 읽어서 바이트코드(.class)로 변환</li>
 <li>Class Loader를 통해 class 파일들을 JVM으로 로딩함</li>
 <li>로딩된 class 파일들은 Execution Engine을 통해 해석됨</li>
@@ -156,89 +137,177 @@ https://github.com/alex-shpak/hugo-book
     <div><b>JVM 아키텍쳐 다이어그램</b> (출처. <a href="https://javatutorial.net/jvm-explained">JVM explained - JavaTutorial</a>)</div>
 </div>
 
-<h3 id="jvm-구성">JVM 구성</h3>
+<h2 id="jvm-구성">JVM 구성</h2>
+
+<p>클래스로더, 실행엔진, 데이터영역으로 구분됨</p>
+
+<h3 id="class-loader">Class Loader</h3>
+
+<h4 id="역할-1">역할</h4>
 
 <ul>
-<li><p>Class Loader</p>
+<li><p>Loading<br />
+클래스 이름, 상속관계, 클래스 타입(class, interface, enum), 메서드, 생성자, 멤버변수, 상수 등에 대한 정보를 로딩해서 바이너리 데이터로 변경</p></li>
 
-<ul>
-<li><p>역할</p>
+<li><p>Linking<br />
+바이트코드 검증 및 메모리 할당 수행<br />
+Verification → Preparation → Resolution 단계를 거침</p></li>
 
-<ul>
-<li><p>Loading</p>
+<li><p>Initialization<br />
+Static block 초기화와 함께 static 데이터들을 할당함 (top → bottom 방식)</p></li>
+</ul>
 
-<h5 id="클래스-이름-상속관계-클래스-타입-class-interface-enum-메서드-생성자-멤버변수-상수-등에-대한-정보를-로딩해서-바이너리-데이터로-변경">클래스 이름, 상속관계, 클래스 타입(class, interface, enum), 메서드, 생성자, 멤버변수, 상수 등에 대한 정보를 로딩해서 바이너리 데이터로 변경</h5></li>
-
-<li><p>Linking</p>
-
-<h5 id="verification-preparation-resolution-단계를-거쳐-바이트코드-검증-및-메모리-할당-수행">Verification → Preparation → Resolution 단계를 거쳐 바이트코드 검증 및 메모리 할당 수행</h5></li>
-
-<li><p>Initialization</p>
-
-<h5 id="static-block-초기화와-함께-static-데이터들을-할당함-top-bottom-방식">Static block 초기화와 함께 static 데이터들을 할당함 (top → bottom 방식)</h5></li>
-</ul></li>
-
-<li><p>구성</p>
+<h4 id="구성">구성</h4>
 
 <ul>
 <li><p>Bootstrap Class Loader</p>
 
-<h5 id="jvm이-실행될때-가장-먼저-실행되는-클래스로더">- JVM이 실행될때 가장 먼저 실행되는 클래스로더</h5>
-
-<h5 id="java-실행에-필요한-기본적인-클래스-로딩-java-home-jre-lib-rt-jar">- Java 실행에 필요한 기본적인 클래스 로딩 ($JAVA_HOME/jre/lib/rt.jar)</h5>
-
-<h5 id="native-언어로-구성되어-있음">- Native 언어로 구성되어 있음</h5></li>
+<ul>
+<li>JVM이 실행될때 가장 먼저 실행되는 클래스로더</li>
+<li>Native 언어로 구성되어 있음</li>
+<li>Java 실행에 필요한 기본적인 클래스 로딩<br /></li>
+<li>$JAVA_HOME/jre/lib/rt.jar
+<br /></li>
+</ul></li>
 
 <li><p>Extension Class Loader (Java9 → Platform Class Loader)</p>
 
-<h5 id="bootstrap-class-loader의-자식클래스로-일반적인-java-확장-클래스-로딩-담당">- Bootstrap Class Loader의 자식클래스로 일반적인 java 확장 클래스 로딩 담당</h5>
-
-<h5 id="classpath-설정이-없더라도-로딩됨-java-home-jre-lib-ext-혹은-java-ext-dirs에-등록된-클래스파일">- Classpath 설정이 없더라도 로딩됨 ($JAVA_HOME/jre/lib/ext 혹은 java.ext.dirs에 등록된 클래스파일)</h5></li>
+<ul>
+<li>Bootstrap Class Loader의 자식클래스</li>
+<li>일반적인 java 확장 클래스 로딩 담당</li>
+<li>Classpath 설정이 없더라도 로딩됨<br /></li>
+<li>$JAVA_HOME/jre/lib/ext 혹은 java.ext.dirs에 등록된 클래스파일
+<br /></li>
+</ul></li>
 
 <li><p>Application Class Loader (Java9 → System Class Loader)</p>
 
-<h5 id="classpath에-정의되어있거나-cp-classpath로-지정된-클래스들이-로딩됨">- Classpath에 정의되어있거나, -cp, -classpath로 지정된 클래스들이 로딩됨</h5>
-
-<h5 id="애플리케이션의-클래스들을-로드함">- 애플리케이션의 클래스들을 로드함</h5></li>
+<ul>
+<li>Classpath에 정의되어있거나, -cp, -classpath로 지정된 클래스들이 로딩됨</li>
+<li>애플리케이션의 클래스들을 로드함
+<br /></li>
+</ul></li>
 
 <li><p>User-Defined Class Loader</p>
 
-<h5 id="애플리케이션-코드에-사용자가-직접-정의해서-사용하는-클래스-로더">- 애플리케이션 코드에 사용자가 직접 정의해서 사용하는 클래스 로더</h5></li>
+<ul>
+<li>애플리케이션 코드에 사용자가 직접 정의해서 사용하는 클래스 로더</li>
 </ul></li>
+</ul>
 
-<li><p>원칙</p>
+<h4 id="원칙">원칙</h4>
 
 <ul>
 <li><p>위임 원칙 (Delegation Principle)</p>
 
-<h5 id="클래스-로딩이-필요한-시점에-3가지-기본-클래스로더의-윗-방향으로-클래스-로딩을-위임">클래스 로딩이 필요한 시점에 3가지 기본 클래스로더의 윗 방향으로 클래스 로딩을 위임</h5>
-
-<h5 id="classloaderrunner-internal-class">ClassLoaderRunner → Internal Class →</h5></li>
+<ul>
+<li>3가지 기본 클래스로더의 윗 방향으로 클래스 로딩을 위임</li>
+<li>ClassLoaderRunner → Application ClassLoader → Extension ClassLoader → Bootstrap ClassLoader
+<br /></li>
+</ul></li>
 
 <li><p>가시범위 원칙 (Visibility Principle)</p>
 
-<h5 id="하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-볼-수-있지만-반대의-경우는-불가능">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 볼 수 있지만, 반대의 경우는 불가능</h5></li>
+<ul>
+<li>하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 볼 수 있음</li>
+<li>반대의 경우는 불가능
+<br /></li>
+</ul></li>
 
 <li><p>유일성 원칙 (Uniqueness Principle)</p>
 
-<h5 id="하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-다시-로딩하지-않도록-함-유일성-보장">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 다시 로딩하지 않도록 함 (유일성 보장)</h5></li>
-</ul></li>
-</ul></li>
-
-<li><p>Execution Engine</p>
-
 <ul>
-<li>로드된 클래스의 바이트코드를 실행하는 Runtime Module
-<br /></li>
+<li>하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 다시 로딩하지 않도록 함</li>
+<li>유일성 보장</li>
+</ul></li>
 </ul>
 
-<p>To be continued</p></li>
+<h3 id="execution-engine">Execution Engine</h3>
 
-<li><p>Interpreter</p></li>
+<ul>
+<li>로드된 클래스의 바이트코드를 실행하는 런타임 모듈</li>
+<li>클래스 로드 작업이 끝난 클래스 파일은 Runtime Data Area의 Method Area 배치됨</li>
+<li>Method Area의 바이트코드를 Execution Engine으로 제공하여 실행할 수 있도록 제공<br />
+(참고. Instruction : Execution Engine 수행하는 가장 최소 단위의 명령어)</li>
+<li>처리방식
 
-<li><p>JIT (Just In Time)</p></li>
+<ul>
+<li>Interpreter 방식 (JVM 최초 버전)<br />
+바이트코드를 한 라인씩 이릭고 해석하여 실행</li>
+<li>JIT (Just In Time) Compiler 방식<br />
+바이트코드를 JIT Compiler 통해서 어셈블러 같은 native code로 변경되어 실행<br />
+실행속도는 빠르지만, 어셈블러 코드 변경 비용발생 (반복 수행이 많을 경우 유리함)<br /></li>
+<li>Interpreter + JIT Compiler 방식으로 실행됨</li>
+</ul></li>
+</ul>
 
-<li><p>Garbage Collector</p></li>
+<h3 id="runtime-data-area">Runtime Data Area</h3>
+
+<p>프로그램을 수행하기 위해 OS에서 할당받은 메모리 공간</p>
+
+<h4 id="pc-register">PC Register</h4>
+
+<ul>
+<li>스레드 시작시 생성됨 (스레드마다 하나씩 존재)</li>
+<li>스레드가 어떤 부분을 어떤 명령으로 실행해야 할지에 대한 기록을 하는 부분<br /></li>
+<li>현재 수행 중인 JVM 명령의 주소를 가짐</li>
+</ul>
+
+<h4 id="jvm-stack">JVM Stack</h4>
+
+<ul>
+<li>프로그램 실행과정에서 임시로 할당되었다가 메서드가 끝나면 바로 소멸되는 데이터 저장</li>
+<li>변수나 임시 데이터, 스레드, 메서드의 정보를 저장함</li>
+<li>메서드 호출시마다 각각의 스택 프레임이 생성됨</li>
+<li>호출된 메서드의 매개변수, 지역변수, 리턴 값, 연산시 일어나는 값을 임시로 저장</li>
+</ul>
+
+<h4 id="native-method-stack">Native method stack</h4>
+
+<ul>
+<li>실제 실행할 수 있는 기계어로 작성된 프로그램을 실행시키는 영역</li>
+<li>Java가 아닌 다른 언어로 작성된 코드를 위한 공간</li>
+<li>Java Native Interface를 통해 바이트코드로 변환하여 저장함</li>
+</ul>
+
+<h4 id="method-area-class-area-static-area">Method Area (Class area, Static area)</h4>
+
+<ul>
+<li>클래스 정보를 처음 메모리 공간에 올릴때 초기화되는 대상을 저장하기 위한 메모리 공간</li>
+<li>프로그램의 흐름을 구성하는 바이트코드가 저장됨</li>
+<li>main 메서드부터 컴파일된 바이트코드 대부분이 저장된다고 볼 수 있음</li>
+<li>Runtime Constant Pool이라는 별도의 관리 영역도 함께 존재함</li>
+<li>저장되는 정보의 종류
+
+<ul>
+<li>Field Information<br />
+멤버변수의 이름, 데이터 타입, 접근제어자에 대한 정보</li>
+<li>Method Information<br />
+메서드 이름, 리턴타입, 매개변수, 접근제어자에 대한 정보</li>
+<li>Type Information<br />
+Type 속성(class, interface 여부), 이름, super class 전체 이름 저장<br /></li>
+</ul></li>
+</ul>
+
+<h4 id="heap">Heap</h4>
+
+<ul>
+<li>객체를 저장하는 가상 메모리 공간</li>
+<li>영역 구분
+
+<ul>
+<li>Permanet Generation<br />
+생성된 객체 정보의 주소값이 저장된 공간<br />
+Class, method 등에 대한 메타정보가 저장되는 영역<br />
+Reflection으로 동적으로 클래스가 로딩되는 경우에 사용됨</li>
+<li>New/Young area<br />
+Eden : 객체들이 최초로 생성되는 공간<br />
+Survivor 0/1 : Eden에서 참조되는 객체들이 저장되는 공간</li>
+<li>Old area<br />
+New area에서 일정시간 참조되는, 살아남은 객체들이 저장되는 공간<br />
+1) Eden 영역에 객체가 가득차게 되면 minor GC 발생<br />
+2) Eden 영역에 있는 값들은 survivor 1 영역에 복사되고, 나머지 영역의 객체는 삭제</li>
+</ul></li>
 </ul>
 </article>
 
@@ -247,9 +316,9 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a class="flex align-center" href="https://github.com/pirate-docs/pirate-posts/commit/0c2eff51faea5a1d14b2a760d58326fea8bad97e" title='Last modified Oct 23, 2019 by andrew' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/pirate-docs/pirate-posts/commit/a77e7c39808ae445b5030befbb023f921c117db3" title='Last modified Nov 6, 2019 by andrew' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Oct 23, 2019</span>
+      <span>Nov 6, 2019</span>
     </a>
   </div>
   
@@ -266,32 +335,26 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
 <li><a href="#jvm-java-virtual-machine-이란">JVM(Java Virtual Machine)이란?</a>
 <ul>
 <li><a href="#역할">역할</a></li>
 <li><a href="#java-프로그램-실행과정">Java 프로그램 실행과정</a></li>
 <li><a href="#jvm-구성">JVM 구성</a>
 <ul>
-<li>
+<li><a href="#class-loader">Class Loader</a>
 <ul>
-<li><a href="#클래스-이름-상속관계-클래스-타입-class-interface-enum-메서드-생성자-멤버변수-상수-등에-대한-정보를-로딩해서-바이너리-데이터로-변경">클래스 이름, 상속관계, 클래스 타입(class, interface, enum), 메서드, 생성자, 멤버변수, 상수 등에 대한 정보를 로딩해서 바이너리 데이터로 변경</a></li>
-<li><a href="#verification-preparation-resolution-단계를-거쳐-바이트코드-검증-및-메모리-할당-수행">Verification → Preparation → Resolution 단계를 거쳐 바이트코드 검증 및 메모리 할당 수행</a></li>
-<li><a href="#static-block-초기화와-함께-static-데이터들을-할당함-top-bottom-방식">Static block 초기화와 함께 static 데이터들을 할당함 (top → bottom 방식)</a></li>
-<li><a href="#jvm이-실행될때-가장-먼저-실행되는-클래스로더">- JVM이 실행될때 가장 먼저 실행되는 클래스로더</a></li>
-<li><a href="#java-실행에-필요한-기본적인-클래스-로딩-java-home-jre-lib-rt-jar">- Java 실행에 필요한 기본적인 클래스 로딩 ($JAVA_HOME/jre/lib/rt.jar)</a></li>
-<li><a href="#native-언어로-구성되어-있음">- Native 언어로 구성되어 있음</a></li>
-<li><a href="#bootstrap-class-loader의-자식클래스로-일반적인-java-확장-클래스-로딩-담당">- Bootstrap Class Loader의 자식클래스로 일반적인 java 확장 클래스 로딩 담당</a></li>
-<li><a href="#classpath-설정이-없더라도-로딩됨-java-home-jre-lib-ext-혹은-java-ext-dirs에-등록된-클래스파일">- Classpath 설정이 없더라도 로딩됨 ($JAVA_HOME/jre/lib/ext 혹은 java.ext.dirs에 등록된 클래스파일)</a></li>
-<li><a href="#classpath에-정의되어있거나-cp-classpath로-지정된-클래스들이-로딩됨">- Classpath에 정의되어있거나, -cp, -classpath로 지정된 클래스들이 로딩됨</a></li>
-<li><a href="#애플리케이션의-클래스들을-로드함">- 애플리케이션의 클래스들을 로드함</a></li>
-<li><a href="#애플리케이션-코드에-사용자가-직접-정의해서-사용하는-클래스-로더">- 애플리케이션 코드에 사용자가 직접 정의해서 사용하는 클래스 로더</a></li>
-<li><a href="#클래스-로딩이-필요한-시점에-3가지-기본-클래스로더의-윗-방향으로-클래스-로딩을-위임">클래스 로딩이 필요한 시점에 3가지 기본 클래스로더의 윗 방향으로 클래스 로딩을 위임</a></li>
-<li><a href="#classloaderrunner-internal-class">ClassLoaderRunner → Internal Class →</a></li>
-<li><a href="#하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-볼-수-있지만-반대의-경우는-불가능">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 볼 수 있지만, 반대의 경우는 불가능</a></li>
-<li><a href="#하위-클래스로더는-상위-클래스로더가-로딩한-클래스를-다시-로딩하지-않도록-함-유일성-보장">하위 클래스로더는 상위 클래스로더가 로딩한 클래스를 다시 로딩하지 않도록 함 (유일성 보장)</a></li>
+<li><a href="#역할-1">역할</a></li>
+<li><a href="#구성">구성</a></li>
+<li><a href="#원칙">원칙</a></li>
 </ul></li>
+<li><a href="#execution-engine">Execution Engine</a></li>
+<li><a href="#runtime-data-area">Runtime Data Area</a>
+<ul>
+<li><a href="#pc-register">PC Register</a></li>
+<li><a href="#jvm-stack">JVM Stack</a></li>
+<li><a href="#native-method-stack">Native method stack</a></li>
+<li><a href="#method-area-class-area-static-area">Method Area (Class area, Static area)</a></li>
+<li><a href="#heap">Heap</a></li>
 </ul></li>
 </ul></li>
 </ul></li>

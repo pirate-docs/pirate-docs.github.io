@@ -37,7 +37,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 22 Oct 2019 15:10:34 +0900</pubDate>
       
       <guid>/posts/jvm/</guid>
-      <description>JVM(Java Virtual Machine)이란? 역할  어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것  자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행하는 것 Java와 OS 사이의 중개자 역할 수행  프로그램 메모리 관리와 최적화하는 것  메모리 관리, Garbage Collection을 수행함    JVM (출처. What is the JVM - JavaWorld)  Java 프로그램 실행과정   JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음  JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함</description>
+      <description>JVM(Java Virtual Machine)이란? 역할 어떤 기기, 또는 어떤 운영체제에서도 실행될 수 있게 하는 것
+프로그램 메모리 관리와 최적화하는 것
+ 자바 애플리케이션을 클래스 로더를 통해 읽어서 자바 API와 함께 실행 Java와 OS 사이의 중개자 역할 수행 메모리 관리, Garbage Collection을 수행   JVM (출처. What is the JVM - JavaWorld)  Java 프로그램 실행과정   JVM은 OS로부터 프로그램이 필요로 하는 메모리를 할당받음
+(JVM이 메모리를 용도에 따라 여러 영역으로 나누어 관리함)</description>
     </item>
     
     <item>

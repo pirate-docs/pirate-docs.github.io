@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_Index on 끄적끄적..</title>
+    <link>/docs/kubernetes/</link>
+    <description>Recent content in _Index on 끄적끄적..</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Dec 2019 15:06:18 +0900</lastBuildDate>
+    
+	<atom:link href="/docs/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
